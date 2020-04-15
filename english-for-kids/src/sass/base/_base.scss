@@ -1,0 +1,9 @@
+body {
+    margin: 0 auto;
+    background-color: $color-brand;
+}
+
+.play-mode {
+    background: linear-gradient(to bottom, $color-second-mode, #01856f) !important;
+    color: $color-second-text !important;
+}

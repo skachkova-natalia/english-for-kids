@@ -1,0 +1,108 @@
+.menu__link {
+    text-decoration: none;
+    color: $color-first-text;
+    transition: color 0.3s ease;
+    vertical-align: top;
+    padding-left: 6px;
+    transition: 0.3s ease;
+    background: none !important;
+    &:hover {
+        text-decoration: underline;
+    }
+    &_selected {
+        color: $color-brand !important;
+    }
+}
+
+#menu-toggle {
+    display: block;
+    margin: 50px 40px;
+    z-index: 10;
+    user-select: none;
+}
+
+#menu-toggle input {
+    display: block;
+    position: absolute;
+    width: 34px;
+    height: 27px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 11;
+    &:checked ~ span {
+        opacity: 1;
+        transform: rotate(45deg) translate(6px, 0);
+        background: $color-first-text;
+        box-shadow: none;
+        &:nth-last-child(3) {
+            opacity: 0;
+            transform: rotate(0deg) scale(0.2, 0.2);
+        }
+        &:nth-last-child(2) {
+            transform: rotate(-45deg) translate(0, 8px);
+        }
+    }
+    &:checked ~ ul {
+        transform: none;
+    }
+}
+
+#menu-toggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: linear-gradient(to right, $color-first-mode, #ffe3b2);
+    border-radius: 3px;
+    z-index: 10;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s ease, background 0.5s ease, opacity 0.55s ease;
+    box-shadow: 1px 1px 4px $color-first-text;
+    &:first-child {
+        transform-origin: 0% 0%;
+    }
+    &:nth-last-child(2) {
+        transform-origin: 0% 100%;
+    }
+}
+
+#menu {
+    position: absolute;
+    height: 100vh;
+    width: 40vw;
+    top: 99px;
+    left: 0;
+    margin: -100px 0 0;
+    background: linear-gradient(180deg, #ffcc73, #ffe3b2);
+    list-style-type: none;
+    transform-origin: 0 0;
+    transform: translate(-100%);
+    transition: transform 0.5s ease;
+    box-shadow: 0 0 20px #a52a2a52;
+    z-index: 9;
+}
+
+#menu li {
+    font-size: 24px;
+    margin: 4vh 0 4vh 14vw;
+    text-align: left;
+    &:hover {
+        text-decoration: underline;
+        font-size: 25px;
+    }
+}
+#menu li:first-child {
+    margin-top: 15vh;
+}
+
+.link__icon {
+    display: inline-block;
+    width: 27px;
+    height: 27px;
+    filter: invert(19%) sepia(48%) saturate(3144%) hue-rotate(340deg) brightness(98%) contrast(92%);;
+}
+
+.play-mode_icon{
+    filter: invert(90%) sepia(94%) saturate(864%) hue-rotate(306deg) brightness(104%) contrast(111%);
+}
