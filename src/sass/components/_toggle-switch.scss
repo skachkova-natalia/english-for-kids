@@ -1,5 +1,5 @@
 .mode {
-    margin: 50px;
+    margin: 40px 40px 0 0;
 }
 
 #toggle-switch {
@@ -21,11 +21,13 @@
 }
 
 #switch {
-    background-color: $color-second-brand;
+    background-color: $color-first-mode;
     width: 120px;
     height: 40px;
     display: inline-block;
     border-radius: 40px;
+    box-shadow: 2px 2px 10px $color-first-text;
+    color: $color-first-text;
     cursor: pointer;
     transition: background-color 0.5s;
     &::after {
@@ -33,7 +35,6 @@
         position: relative;
         top: 9px;
         right: 6px;
-        color: $color-text;
         font-size: 20px;
     }
     &::before {
@@ -41,7 +42,6 @@
         position: relative;
         top: 9px;
         left: 15px;
-        color: $color-second-brand;
         font-size: 20px;
         opacity: 0;
     }
@@ -56,4 +56,5 @@
     border-radius: 50%;
     background-color: $color-brand;
     transition: 0.3s ease;
+    box-shadow: 1px 1px 0 #a52a2a33;
 }
